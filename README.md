@@ -39,16 +39,24 @@ The custom Chaste classes are defined in the following files:
 
 ## Practical session
 
-### 1. User project structure
+### 1. User project structure & set up
 
 - Look through the structure of the user project and make sure you understand what all the files are there for.
-- Go through the steps to create a new user project, making sure you have run the [setup_project.py](https://github.com/Chaste/template_project/blob/main/setup_project.py) script.
+- Note how the various classes in the `src` directory inherit from the base Chaste library classes.
+- Set up the workshop user project
+  - From your ubuntu terminal (for windows, linux/macosx use native terminal), navigate into your Chaste directory, then the projects directory using the command `cd projects`
+  - Clone this repository into the `projects` directory using the command `git clone https://github.com/Chaste/IntroToChasteCpp2025.git`
+  - Navigate back to your `build` directory
+  - Configure cmake to build your project using `cmake ../src -DChaste_ENABLE_project_IntroToChasteCpp2025=ON -DChaste_ENABLE_project_IntroToChasteCpp2025_TESTING=ON` from the build directory
+  - Build the project! `make project_IntroToChasteCpp2025`
 
 ### 2. Run the test suite
 
 - Read through the code in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp) and make sure you undersand what it is doing.
 - Compile and run the test suite in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp).
 - Open the output in ParaView and see what each simulation has produced.
+  - Download the output files from the `output` directory in vscode
+  - Follow the instructions from the slides to view the outputs
 
 ### 3. Read though the custom classes
 
@@ -63,3 +71,9 @@ The custom Chaste classes are defined in the following files:
 
 - Take one of the simulations in the test suite in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp), and re-write it as a node based simulation. You may find one of the tutorials useful: [https://chaste.cs.ox.ac.uk/trac/wiki/UserTutorials#Cell-basedChaste](https://chaste.cs.ox.ac.uk/trac/wiki/UserTutorials#Cell-basedChaste)
 - Write a custom class that would make sense for a node based simulation, and add it to your new simulation.
+
+### 6. Try creating your own user project!
+- Create your own project repo on GitHub from the user project template [https://github.com/Chaste/template_project](https://github.com/Chaste/template_project)
+- Clone your project into the `projects` directory
+- Run the `setup_project.py` script
+- Add a test file and write your own test that runs a cell-based simulation
