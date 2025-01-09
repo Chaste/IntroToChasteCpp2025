@@ -1,6 +1,6 @@
 # Introduction to the Chaste C++ interface
 
-This repository was created for the [2023 Chaste workshop in Oxford](https://chaste.github.io/workshops/2023-09-11/).
+This repository was created for the [2023 Chaste workshop in Oxford](https://chaste.github.io/workshops/2023-09-11/) and then adapted for the 2025 Nottingham workshop.
 It introduces some simple examples of vertex model simulations, and then examples of how simulations can be customised by writing new C++ classes.
 
 ## Structure
